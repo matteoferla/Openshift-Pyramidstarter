@@ -9,7 +9,8 @@ In Openshift Starter the newest RHEL python image (formerly "catridge") is 3.5. 
 However, in never versions (_e.g._ CentOS 3.6 used in the `Dockerfile` or in Openshift for rich people) the latter is not.
 To make `setup.py` run there add a dot in the requirement list (_i.e._ install this, as a `setup.py` is afterall how pip installs stuff)—
 pip installs packages based on what requires what, but in case of neutrality it runs the bottom ones first, so add it to the top.    
-Also there is the possibility that the memory needed to build is insufficient as happens in version 2 for pandas (which was never meant for Python 3.2), so up the memory.
+Also there is the possibility that the memory needed to build is insufficient as happens in version 2 for pandas (which was never meant for Python 3.2), so up the memory.     
+In the previous version the environment was determined with `os.environ`, the variables have changed. If you care to know what they are just print them.
 
 NB. The Dockerfile is not needed, but everyone loves Docker and is there just in case.
 
