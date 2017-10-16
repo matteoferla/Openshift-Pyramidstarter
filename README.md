@@ -13,6 +13,7 @@ To import a given package that is not part of the core, add it to the list in `r
 Cheat: to copy a given python installation `pip freeze > requirements.txt`.     
 Pip in the Openshift 3 starter is version 7, not 9.
 To update to the latest in Openshift when configuring the build add the variable `UPGRADE_PIP_TO_LATEST=true`. This is required if you want numpy and scipy which are installed by wheel in the latter version.     
+![screenshot of pip upgrade](/pyramidstarter/static/Screen%20Shot%202017-10-16%20at%2008.45.01.png)    
 In Openshift Starter the newest RHEL python image (formerly "catridge") is 3.5. This runs both `requirements.txt` and `setup.py`.
 However, in never versions (_e.g._ CentOS 3.6 used in the `Dockerfile` or in Openshift for rich people) the latter is not.
 To make `setup.py` run there add a dot in the requirement list (_i.e._ install this, as a `setup.py` is afterall how pip installs stuff)—
