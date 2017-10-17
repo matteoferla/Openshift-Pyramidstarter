@@ -1,7 +1,7 @@
 # Pyramidstarter README
 
 ## App.py
-There are many ways to get your pyramid project running on Openshift.  This is one example.  I use Waitress as the server —for others see `app.py`.    
+There are many ways to get your pyramid project running on Openshift.  This is one example. Waitress is currently the server —for others see `app.py`—, this is simple, but it also means that https decoding is not supported.      
 The Openshift 3 entrypoint is `app.py`. `wsgi.py` is no longer an option.   
 There are two ini files, `production.ini` is the "normal" version. `development.ini` is strictly for development and will give you access to the python console to inspect errors. the choice of the two is in `app.py`, where the latter is run only on localhost.
 
